@@ -25,7 +25,7 @@ Goes well with [make-all/tuya-local](https://github.com/make-all/tuya-local) Hom
 Requires Python installed!
 
 ```shell
-uncover.py -v [vendor] username password
+uncover.py -v vendor username password
 ```
 
 `uncover.py` -h for help
