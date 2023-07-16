@@ -18,6 +18,8 @@ Supports these apps:
 
 *Not all apps are verified as working since some keys were found randomly on the internet.*
 
+Goes well with [make-all/tuya-local](https://github.com/make-all/tuya-local) Home Assistant custom component.
+
 ## Use
 
 Requires Python installed!
