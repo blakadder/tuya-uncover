@@ -28,7 +28,7 @@ Requires Python installed!
 uncover.py -v vendor username password
 ```
 
-`uncover.py` -h for help
+`uncover.py -h` for all options
 
 ### Requirements
 
