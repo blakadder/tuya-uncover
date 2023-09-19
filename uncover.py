@@ -45,7 +45,7 @@ _TUYA_KNOWN_VENDORS = {
     "sylvania": {
         "brand": "Sylvania",
         "client_id": "creq75hn4vdg5qvrgryp",
-        "secret": "A_wparh3scdv8dc7rrnuegaf9mqmn4snpk_ag4xcmp9rjttkj9yf9e8c3wfxry7yr44"
+        "secret": "A_ag4xcmp9rjttkj9yf9e8c3wfxry7yr44_wparh3scdv8dc7rrnuegaf9mqmn4snpk"
     },
     "tuya": {
         "brand": "Tuya",
@@ -215,17 +215,26 @@ class TuyaCloudApiOEM():
 
         self._sid = login_info["sid"]
 
-    def list_devices(self):
-        devs = {}
+    def list_devices(self, map_tt_compat=False, include_raw=False):
+        devs = [] if map_tt_compat else {}
         # First fetch all "groups", i.e. homes
         for group in self._api("tuya.m.location.list"):
             # Then fetch devices for each group and merge into a single list
             for dev in self._api(
                 "tuya.m.my.group.device.list", extra_params={"gid": group["groupId"]}
             ):
-                # Map each device to the same format as the IoT Platform API
-                devs[dev["name"]] = self._map_device(dev)
-                # print(devs)
+                if map_tt_compat:
+                    # Map each device to the same format as TinyTuya's devices.json
+                    d = self._map_device_tt(dev)
+                    if include_raw:
+                        d['raw'] = dev
+                    devs.append(d)
+                else:
+                    # Map each device to the same format as the IoT Platform API
+                    k = dev["name"]
+                    devs[k] = self._map_device(dev)
+                    if include_raw:
+                        devs[k]['raw'] = dev
         return devs
 
     def _map_device(self, dev):
@@ -237,6 +246,19 @@ class TuyaCloudApiOEM():
             "uuid": dev["uuid"],
             "product_id": dev["productId"],
             "dps": dict(sorted(dev["dps"].items())),
+        }
+
+    def _map_device_tt(self, dev):
+        return {
+            "name": dev["name"],
+            "id": dev["devId"],
+            "key": dev["localKey"],
+            "mac": ':'.join(dev["mac"][i:i+2] for i in range(0, len(dev["mac"]), 2)),
+            "uuid": dev["uuid"],
+            "category": dev["category"],
+            "product_id": dev["productId"],
+            "sub": dev["virtual"],
+            "icon": dev["iconUrl"]
         }
 
 class InvalidUserSession(ValueError):
@@ -251,11 +273,42 @@ def main(args):
     api = TuyaCloudApiOEM(f"oem_{args.vendor}", args.region, args.email,
                           args.password, args.client_id, args.secret)
 
-    api.login()
-    print(json.dumps(api.list_devices(), indent=4))
+    if args.sid:
+        api._sid = args.sid
+    else:
+        api.login()
+        print( 'Got Login SID:', api._sid )
+
+    devs = api.list_devices(bool(args.write_json), bool(args.raw_details))
+    print('Downloaded %r devices:' % len(devs))
+    print(json.dumps( devs, indent=4))
+
+    if args.write_json:
+        try:
+            # Load existing devices
+            with open(args.write_json, 'r') as f:
+                all_old_devs = json.load(f)
+            new_devids = [d['id'] for d in devs]
+            devs += [d for d in all_old_devs if d['id'] not in new_devids]
+        except:
+            print('Unable to load existing devices from', args.write_json)
+
+        # Sort it by id
+        devs.sort( key=lambda dev: dev['id'] if 'id' in dev else '' )
+        with open(args.write_json, 'w') as f:
+            json.dump(devs, f, indent=4, default=dict)
+        print('Saved %r device list to:' % len(devs), args.write_json)
 
 
 parser = argparse.ArgumentParser(description='List devices via the Tuya OEM API.')
+
+parser.add_argument("email", help="Your Tuya OEM app account email")
+
+parser.add_argument("password", help="Your Tuya OEM app password")
+
+parser.add_argument("-i", "--sid", "--session-id",
+                    default="",
+                    help="Previous session ID")
 
 parser.add_argument("-r", "--region", choices=["eu", "us", "cn", "in"],
                     default="eu",
@@ -273,10 +326,14 @@ parser.add_argument("-s", "--secret",
                     default="",
                     help="Tuya OEM vendor secret, required for generic vendor")
 
-parser.add_argument("email", help="Your Tuya OEM app account email")
+parser.add_argument("-a", "--raw-details",
+                    action='store_true',
+                    help="Include raw output in 'raw' key")
 
-parser.add_argument("password", help="Your Tuya OEM app password")
+parser.add_argument("-w", "--write-json",
+                    nargs='?', const='devices.json', default=False, metavar='devices.json',
+                    help="Write output to TinyTuya-compatible devices.json file. If this file already exists then devices will be merged into it")
 
 args = parser.parse_args()
-
+print(args)
 main(args)
