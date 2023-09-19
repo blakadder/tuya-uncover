@@ -45,7 +45,7 @@ _TUYA_KNOWN_VENDORS = {
     "sylvania": {
         "brand": "Sylvania",
         "client_id": "creq75hn4vdg5qvrgryp",
-        "secret": "A_wparh3scdv8dc7rrnuegaf9mqmn4snpk_ag4xcmp9rjttkj9yf9e8c3wfxry7yr44"
+        "secret": "A_ag4xcmp9rjttkj9yf9e8c3wfxry7yr44_wparh3scdv8dc7rrnuegaf9mqmn4snpk"
     },
     "tuya": {
         "brand": "Tuya",
