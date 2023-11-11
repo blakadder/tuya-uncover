@@ -56,7 +56,38 @@ _TUYA_KNOWN_VENDORS = {
         "brand": "Ultenic",
         "client_id": "jumhahnc744wvtaj9qgd",
         "secret": "A_jeer4x97qvjhcx7dmxxasst49gya4mn3_dfpfvmmm9sgjfmydrtakcmu38mu3jctv"
+    },
+    "woox": {
+        "brand": "Woox Home",
+        "client_id": "pyxevcmw83jg83qca9c7",
+        "secret": "A_e3g9q4enqeew9x7xgcqkn8jjcdgwf8py_h8wv7dea7u4hnfc8k8qagr897yuc79ar",
+    },
+    "maxcom": {
+        "brand": "Maxcom Home",
+        "client_id": "83f54m7c4wpmp48a377e",
+        "secret": "A_n33asm4fv3yud9pcjfuxcycspy7fhx3g_kvjavqmjyf3v5wk9s55fgeewgkgjnhc9",
+    },
+    "calex": {
+        "brand": "Calex Smart",
+        "client_id": "xh8txuxq9juy48e5q39w",
+        "secret": "A_u7mn44dkwx3qqe4kkakc4p933au5fnkr_g9egj8jjgup8ctpxjknye5ar4wxghesa",
+    },
+    "smartdgm": {
+        "brand": "SmartDGM",
+        "client_id": "ryvgvwmtydwvsh3hd7rr",
+        "secret": "A_gmjvan774aag5u8ksjtt8dvyas8pvg8j_g3xtrhk4rxpeqxuneqmrx54dqy4htda3",
+    },
+    "gridconnect": {
+        "brand": "GridConnect",
+        "client_id": "k584ttaqt7f4huakhtgp",
+        "secret": "A_yg7pds9ap4vd3vj8t8cjy5agvj4jygay_c5t98m3kp7atcnspggcqewp5cqhnfuum",
+    },
+    "spectrum": {
+        "brand": "Spectrum Smart",
+        "client_id": "t8aygqqdh8u7nd5j5kcf",
+        "secret": "A_avfpxsmwwt9txxg8eyd4pppfdqdyydqg_xsxdsvwgt7kdpe8xj38nvkxw4gaw4dkh",
     }
+
 }
 
 _LOGGER = logging.getLogger(__name__)
