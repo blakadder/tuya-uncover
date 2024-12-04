@@ -86,8 +86,12 @@ _TUYA_KNOWN_VENDORS = {
         "brand": "Spectrum Smart",
         "client_id": "t8aygqqdh8u7nd5j5kcf",
         "secret": "A_avfpxsmwwt9txxg8eyd4pppfdqdyydqg_xsxdsvwgt7kdpe8xj38nvkxw4gaw4dkh",
+    },
+    "tesla": {
+        "brand": "Tesla Smart",
+        "client_id": "gwfwneqcq8xhqghp47wq",
+        "secret": "A_3kfxrauppxvtrmknr4mxatacdf7yvmfg_hrwpnqjag5jp3mkcsm59agm8u5dfuxka",
     }
-
 }
 
 _LOGGER = logging.getLogger(__name__)
