@@ -91,6 +91,11 @@ _TUYA_KNOWN_VENDORS = {
         "brand": "Tesla Smart",
         "client_id": "gwfwneqcq8xhqghp47wq",
         "secret": "A_3kfxrauppxvtrmknr4mxatacdf7yvmfg_hrwpnqjag5jp3mkcsm59agm8u5dfuxka",
+    },
+    "lscsmartconnect": {
+        "brand": "LSC Smart Connect",
+        "client_id": "q594qaqdpy89gmvyndtp",
+        "secret": "A_yegjfwuukevd8qfxw3rjfr5sj43p5gpr_xh59e8qykn4sp7jyh7rwaq3ykfwf8e5n",
     }
 }
 
