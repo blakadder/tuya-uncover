@@ -96,6 +96,11 @@ _TUYA_KNOWN_VENDORS = {
         "brand": "LSC Smart Connect",
         "client_id": "q594qaqdpy89gmvyndtp",
         "secret": "A_yegjfwuukevd8qfxw3rjfr5sj43p5gpr_xh59e8qykn4sp7jyh7rwaq3ykfwf8e5n",
+    },
+    "alecoair": {
+        "brand": "AlecoAir",
+        "client_id": "pvufcdrftnfkt4rqkxs5",
+        "secret": "A_48vafqcmrfx4mvjrph4j4ayfe9hctnkd_jmehruant8ag7nscxn8u47u9yf8h48e7",
     }
 }
 
