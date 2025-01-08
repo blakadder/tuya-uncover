@@ -101,7 +101,12 @@ _TUYA_KNOWN_VENDORS = {
         "brand": "AlecoAir",
         "client_id": "pvufcdrftnfkt4rqkxs5",
         "secret": "A_48vafqcmrfx4mvjrph4j4ayfe9hctnkd_jmehruant8ag7nscxn8u47u9yf8h48e7",
-    }
+    },
+    "philipssmartselect": {
+       "brand": "Philips Smart Select",
+       "client_id": "ajc33deua7sey8gkg8st",
+       "secret": "A_995k5m8tpah4snp7xu59mcvmfhkhv7mk_kts7cj7mrxgjv7nqcjp9wata3t7ehwya",
+    },
 }
 
 _LOGGER = logging.getLogger(__name__)
