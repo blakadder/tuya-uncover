@@ -107,6 +107,11 @@ _TUYA_KNOWN_VENDORS = {
        "client_id": "ajc33deua7sey8gkg8st",
        "secret": "A_995k5m8tpah4snp7xu59mcvmfhkhv7mk_kts7cj7mrxgjv7nqcjp9wata3t7ehwya",
     },
+    "noussmart": {
+       "brand": "Nous Smart",
+       "client_id": "dhs3xggvwehvc5tj9xqp",
+       "secret": "A_wwwrnvy7gayy9dvp5nuahyd5d3j4kyxp_7vgwxdy589jtwwee7rugayxrderkekww",
+    },
 }
 
 _LOGGER = logging.getLogger(__name__)
