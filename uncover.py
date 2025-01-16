@@ -112,6 +112,11 @@ _TUYA_KNOWN_VENDORS = {
        "client_id": "dhs3xggvwehvc5tj9xqp",
        "secret": "A_wwwrnvy7gayy9dvp5nuahyd5d3j4kyxp_7vgwxdy589jtwwee7rugayxrderkekww",
     },
+    "nedis": {
+       "brand": "Nedis Smartlife",
+       "client_id": "pettfwyepwpwwhxy57gp",
+       "secret": "A_73p8kvkhsted5fxvx8pfudk5hwtmnjr3_yptwxx4t9rkmcppyagwpd43y77tnpw8s",
+    },
 }
 
 _LOGGER = logging.getLogger(__name__)
