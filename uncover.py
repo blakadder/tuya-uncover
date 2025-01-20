@@ -117,6 +117,11 @@ _TUYA_KNOWN_VENDORS = {
        "client_id": "pettfwyepwpwwhxy57gp",
        "secret": "A_73p8kvkhsted5fxvx8pfudk5hwtmnjr3_yptwxx4t9rkmcppyagwpd43y77tnpw8s",
     },
+    "blitzwolf": {
+       "brand": "Blitzwolf",
+       "client_id": "xpqw7hnghsyvt7y84qr3",
+       "secret": "A_yf3skmg73upyytecsy5tjg58tdmh87t3_vgq3jywdfa8kqyr7eaq7cgm387e53ew9",
+    },
 }
 
 _LOGGER = logging.getLogger(__name__)
