@@ -122,6 +122,11 @@ _TUYA_KNOWN_VENDORS = {
        "client_id": "xpqw7hnghsyvt7y84qr3",
        "secret": "A_yf3skmg73upyytecsy5tjg58tdmh87t3_vgq3jywdfa8kqyr7eaq7cgm387e53ew9",
     },
+    "airam": {
+       "brand": "Airam SmartHome",
+       "client_id": "efaxsa7hyadmwvw89mvj",
+       "secret": "A_c8cse843mexx8umvdsrqfmx3hs47fk93_jm5tdcyv8hr4kdfq8mxkvf9hj59pte3j",
+    },
 }
 
 _LOGGER = logging.getLogger(__name__)
