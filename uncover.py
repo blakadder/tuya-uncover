@@ -146,6 +146,11 @@ _TUYA_KNOWN_VENDORS = {
        "brand": "Artika",
        "client_id": "7htkwyyja9h3yuh9w7qj",
        "secret": "A_gyw7grhscq9ewwmdhygnchqattuyyapy_kvfa8gtvuu9fdetpvt99443gy4h34pqk"
+    },
+    "xch2023": {
+       "brand": "Xtreme Connected Home",
+       "client_id": "4jgkenx3w5gpfuh9mfux",
+       "secret": "A_k3cwmej33schtsu75drn75gjrvyqrspd_ernnu7n85ynkmnesvn4hpvqdjy5rqatr"
     }
 }
 
