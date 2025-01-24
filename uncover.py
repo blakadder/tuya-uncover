@@ -137,6 +137,11 @@ _TUYA_KNOWN_VENDORS = {
        "client_id": "8fjupshhjwqq4auxtd4m",
        "secret": "A_4eqrx7y3sygqv5eragnwxnetv3epsj4f_svhcum73wnvaehgv88wdj5dddfxrt48u"
     },
+    "overmax": {
+       "brand": "Overmax Control",
+       "client_id": "um7ysycqag83et8drf8n",
+       "secret": "A_jpjmj4vp5gvwmdpf8hk5yjkrj3teegve_kwqsmrup5qrx4rpgssrkt7dngq8c53q9"
+    }
 }
 
 _LOGGER = logging.getLogger(__name__)
