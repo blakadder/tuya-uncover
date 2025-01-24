@@ -127,6 +127,11 @@ _TUYA_KNOWN_VENDORS = {
        "client_id": "efaxsa7hyadmwvw89mvj",
        "secret": "A_c8cse843mexx8umvdsrqfmx3hs47fk93_jm5tdcyv8hr4kdfq8mxkvf9hj59pte3j",
     },
+    "treatlife": {
+       "brand": "Treatlife",
+       "client_id": "8yncru89qa8495mdutya",
+       "secret": "A_37enmfsnr4r3w8j5cd3fxmhm97gaatxx_y4gn37gryf5ufqhqgh99r9wp3h44dp95"
+    }
 }
 
 _LOGGER = logging.getLogger(__name__)
