@@ -15,6 +15,14 @@ Supports these apps:
 - Proscenic
 - Sylvania
 - Ultenic
+- Tesla
+- LSC Smart Connect
+- Philips Smart Select
+- AlecoAir
+- Nous Smart
+- Nedis Smartlife
+- Blitzwolf
+- Airam SmartHome
 
 *Not all apps are verified as working since some keys were found randomly on the internet.*
 
