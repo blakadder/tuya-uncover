@@ -127,6 +127,31 @@ _TUYA_KNOWN_VENDORS = {
        "client_id": "efaxsa7hyadmwvw89mvj",
        "secret": "A_c8cse843mexx8umvdsrqfmx3hs47fk93_jm5tdcyv8hr4kdfq8mxkvf9hj59pte3j",
     },
+    "treatlife": {
+       "brand": "Treatlife",
+       "client_id": "8yncru89qa8495mdutya",
+       "secret": "A_37enmfsnr4r3w8j5cd3fxmhm97gaatxx_y4gn37gryf5ufqhqgh99r9wp3h44dp95"
+    },
+    "settiplus": {
+       "brand": "Setti+",
+       "client_id": "8fjupshhjwqq4auxtd4m",
+       "secret": "A_4eqrx7y3sygqv5eragnwxnetv3epsj4f_svhcum73wnvaehgv88wdj5dddfxrt48u"
+    },
+    "overmax": {
+       "brand": "Overmax Control",
+       "client_id": "um7ysycqag83et8drf8n",
+       "secret": "A_jpjmj4vp5gvwmdpf8hk5yjkrj3teegve_kwqsmrup5qrx4rpgssrkt7dngq8c53q9"
+    },
+    "artika": {
+       "brand": "Artika",
+       "client_id": "7htkwyyja9h3yuh9w7qj",
+       "secret": "A_gyw7grhscq9ewwmdhygnchqattuyyapy_kvfa8gtvuu9fdetpvt99443gy4h34pqk"
+    },
+    "xch2023": {
+       "brand": "Xtreme Connected Home",
+       "client_id": "4jgkenx3w5gpfuh9mfux",
+       "secret": "A_k3cwmej33schtsu75drn75gjrvyqrspd_ernnu7n85ynkmnesvn4hpvqdjy5rqatr"
+    }
 }
 
 _LOGGER = logging.getLogger(__name__)
