@@ -151,6 +151,11 @@ _TUYA_KNOWN_VENDORS = {
        "brand": "Xtreme Connected Home",
        "client_id": "4jgkenx3w5gpfuh9mfux",
        "secret": "A_k3cwmej33schtsu75drn75gjrvyqrspd_ernnu7n85ynkmnesvn4hpvqdjy5rqatr"
+    },
+    "creelighting": {
+       "brand": "Cree Lighting",
+       "client_id": "yaus4vykgfgnaum75h8c",
+       "secret": "A_pws4aa9ux4dhrvwxgj37pptsgu9dys8q_3wqevmkewf7kqum3dm79tjjg7asqw9dc"
     }
 }
 
