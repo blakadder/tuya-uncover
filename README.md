@@ -38,6 +38,8 @@ uncover.py -v vendor username password
 
 `uncover.py -h` for all options
 
+Passwords using special characters might need to be escaped in `"` (e.g. `python uncover.py -r eu -v ledvance test@test.com "my$pass@word&"`
+
 ### Requirements
 
 ```shell
