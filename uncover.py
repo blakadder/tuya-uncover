@@ -156,6 +156,11 @@ _TUYA_KNOWN_VENDORS = {
        "brand": "Cree Lighting",
        "client_id": "yaus4vykgfgnaum75h8c",
        "secret": "A_pws4aa9ux4dhrvwxgj37pptsgu9dys8q_3wqevmkewf7kqum3dm79tjjg7asqw9dc"
+    },
+    "atomi": {
+       "brand": "Atomi Smart",
+       "client_id": "4upds48whre7hmjdkxdc",
+       "secret": "A_k5nk85d8xf3mde4jjjney3s4un7e74a9_ecm3chpyv75nsvuyfk3vp4qd9avjffn7"
     }
 }
 
