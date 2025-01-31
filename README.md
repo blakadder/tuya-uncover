@@ -4,7 +4,7 @@
 
 A simple Python script to list devices from Tuya OEM apps and reveal their local keys and [Data Points](https://developer.tuya.com/en/docs/iot-device-dev/tuyaos-gateway-device-datapoint?id=Kc80mqozruc72) it uses.
 
-Supports these apps:
+Supports these vendors/apps:
 
 - Smart Life (default)
 - Tuya
@@ -23,6 +23,13 @@ Supports these apps:
 - Nedis Smartlife
 - Blitzwolf
 - Airam SmartHome
+- Teratlife
+- Setti+
+- Overmax Control
+- Artika
+- Xtreme Connected Home
+- Atomi Smart
+- Cree Lighting
 
 *Not all apps are verified as working since some keys were found randomly on the internet.*
 
