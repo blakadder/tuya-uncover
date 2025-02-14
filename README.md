@@ -59,6 +59,6 @@ And maybe more... Let me know!
 
 Main code from [@avataar gist](https://gist.github.com/avataar/2a6ee4f58aaedfcc062a838380f3cffb).
 
-App secrets deciphered with instructions from [https://blog.rgsilva.com/reverse-engineering-positivos-smart-home-app/](https://blog.rgsilva.com/reverse-engineering-positivos-smart-home-app/) and <https://github.com/nalajcie/tuya-sign-hacking>
+App secrets deciphered with instructions from [https://rgsilva.com/blog/reverse-engineering-positivos-smart-home-app/](https://rgsilva.com/blog/reverse-engineering-positivos-smart-home-app/) and <https://github.com/nalajcie/tuya-sign-hacking>
 
 Some keys found on [rospogrigio/localtuya](https://github.com/rospogrigio/localtuya/issues/1188)
