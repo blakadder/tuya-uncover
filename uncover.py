@@ -161,6 +161,11 @@ _TUYA_KNOWN_VENDORS = {
        "brand": "Atomi Smart",
        "client_id": "4upds48whre7hmjdkxdc",
        "secret": "A_k5nk85d8xf3mde4jjjney3s4un7e74a9_ecm3chpyv75nsvuyfk3vp4qd9avjffn7"
+    },
+    "kogan": {
+       "brand": "Kogan SmarterHome",
+       "client_id": "e7w4qupjxvym7cyatptt",
+       "secret": "A_cs8387f4d574aqh7kkw8rjgtprf3t79y_xfng74ctkrr3q4ehtysh83cmd4xukjya"
     }
 }
 
