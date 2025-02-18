@@ -166,6 +166,11 @@ _TUYA_KNOWN_VENDORS = {
        "brand": "Kogan SmarterHome",
        "client_id": "e7w4qupjxvym7cyatptt",
        "secret": "A_cs8387f4d574aqh7kkw8rjgtprf3t79y_xfng74ctkrr3q4ehtysh83cmd4xukjya"
+    },
+    "brilliant": {
+       "brand": "Brilliant Smart",
+       "client_id": "wq7m89tnerf73wnxg9v4",
+       "secret": "A_5gqrr4ue8dwuvptfghpmahate9r74cet_px9evfh98hr3eg5ape8avvrdsm93cpxy"
     }
 }
 
