@@ -171,6 +171,11 @@ _TUYA_KNOWN_VENDORS = {
        "brand": "Brilliant Smart",
        "client_id": "wq7m89tnerf73wnxg9v4",
        "secret": "A_5gqrr4ue8dwuvptfghpmahate9r74cet_px9evfh98hr3eg5ape8avvrdsm93cpxy"
+    },
+    "petoneer": {
+       "brand": "Petoneer",
+       "client_id": "qxrvsdynvsp3ep98t7ct",
+       "secret": "A_sacm7rrwydn9vx5eergq5xjk44ytmrhs_jag9gue7tc4dwsdhtahq7tj83cmggumf"
     }
 }
 
