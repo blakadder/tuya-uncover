@@ -166,6 +166,21 @@ _TUYA_KNOWN_VENDORS = {
        "brand": "Kogan SmarterHome",
        "client_id": "e7w4qupjxvym7cyatptt",
        "secret": "A_cs8387f4d574aqh7kkw8rjgtprf3t79y_xfng74ctkrr3q4ehtysh83cmd4xukjya"
+    },
+    "brilliant": {
+       "brand": "Brilliant Smart",
+       "client_id": "wq7m89tnerf73wnxg9v4",
+       "secret": "A_5gqrr4ue8dwuvptfghpmahate9r74cet_px9evfh98hr3eg5ape8avvrdsm93cpxy"
+    },
+    "petoneer": {
+       "brand": "Petoneer",
+       "client_id": "qxrvsdynvsp3ep98t7ct",
+       "secret": "A_sacm7rrwydn9vx5eergq5xjk44ytmrhs_jag9gue7tc4dwsdhtahq7tj83cmggumf"
+    },
+    "goldair": {
+       "brand": "Goldair",
+       "client_id": "m8eaj959wvg8t34mgvvf",
+       "secret": "A_8ju3yvffeqkqe9sjkmtfwwvya7p8rkfu_ed8mafnvhvdcwtt5pp3msh7s3npv339s"
     }
 }
 
