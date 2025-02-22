@@ -176,6 +176,11 @@ _TUYA_KNOWN_VENDORS = {
        "brand": "Petoneer",
        "client_id": "qxrvsdynvsp3ep98t7ct",
        "secret": "A_sacm7rrwydn9vx5eergq5xjk44ytmrhs_jag9gue7tc4dwsdhtahq7tj83cmggumf"
+    },
+    "goldair": {
+       "brand": "Goldair",
+       "client_id": "m8eaj959wvg8t34mgvvf",
+       "secret": "A_8ju3yvffeqkqe9sjkmtfwwvya7p8rkfu_ed8mafnvhvdcwtt5pp3msh7s3npv339s"
     }
 }
 
