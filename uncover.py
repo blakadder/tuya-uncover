@@ -181,6 +181,11 @@ _TUYA_KNOWN_VENDORS = {
        "brand": "Goldair",
        "client_id": "m8eaj959wvg8t34mgvvf",
        "secret": "A_8ju3yvffeqkqe9sjkmtfwwvya7p8rkfu_ed8mafnvhvdcwtt5pp3msh7s3npv339s"
+    },
+    "cleanairoptima": {
+       "brand": "Clean Air Optima",
+       "client_id": "fs79kx7aqug834sq4a59",
+       "secret": "A_ddrnr7t7qakpt4ysyq3u85kayajkdwge_9a33qeq5mptdgkjew7wh3fkednf4khds"
     }
 }
 
