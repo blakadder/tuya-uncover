@@ -186,6 +186,11 @@ _TUYA_KNOWN_VENDORS = {
        "brand": "Clean Air Optima",
        "client_id": "fs79kx7aqug834sq4a59",
        "secret": "A_ddrnr7t7qakpt4ysyq3u85kayajkdwge_9a33qeq5mptdgkjew7wh3fkednf4khds"
+    },
+    "cecotec": {
+       "brand": "Cecotec",
+       "client_id": "gxrfvnd347yrueewmhvk",
+       "secret": "A_tr9chggcv7kuwc4cxntamkcr4n3uwxns_5r33gm3ayhhydkp5msn8tk3kknnykhse"
     }
 }
 
