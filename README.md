@@ -43,6 +43,12 @@ Requires Python installed!
 uncover.py -v vendor username password
 ```
 
+If using the Nix flake, you can run it like this:
+
+```shell
+nix run . -- -v vendor username password
+```
+
 `uncover.py -h` for all options
 
 Passwords using special characters might need to be escaped in `"` (e.g. `python uncover.py -r eu -v ledvance test@test.com "my$pass@word&"`
