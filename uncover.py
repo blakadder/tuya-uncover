@@ -12,6 +12,27 @@ _TUYA_USER_AGENT = "TY-UA=APP/Android/1.1.6/SDK/null"
 _TUYA_API_VERSION = "1.0"
 
 _TUYA_KNOWN_VENDORS = {
+    # Extracted from the official com.boneco.smart Android app, version 1.1.0.
+    "boneco": {
+        "brand": "Boneco Smart",
+        "client_id": "7hd8vnjmacf3y3xu598r",
+        # Native signing key: packageName_certificateSHA256_bitmapSecret_appSecret.
+        "secret": "com.boneco.smart_25:F7:B4:96:E8:CD:99:CA:BB:FA:95:AF:2B:64:80:56:28:E5:1E:0E:F3:0B:94:6C:8E:0F:98:B9:5C:FE:22:2C_xn59e38avj9swd9yynxqeqs4xvqrf5mn_c88xw9dgj9wreuavsdjykcxt8wgupvmv",
+        "endpoints": {
+            "eu": "https://a1-eu.boneco-smart-app.com/api.json",
+            "us": "https://a1-us.boneco-smart-app.com/api.json",
+            "in": "https://a1-in.boneco-smart-app.com/api.json"
+        },
+        "api_namespace": "thing",
+        "request_params": {
+            "ttid": "sdk_bonecosmart@7hd8vnjmacf3y3xu598r",
+            # HMAC-SHA256(clientId, packageName_certificateSHA256).hexdigest()[8:16]
+            "chKey": "347fab48",
+            "appVersion": "1.1.0",
+            "os": "Android"
+        },
+        "post_params": True
+    },
     "birdlover": {
         "brand": "BirdLover",
         "client_id": "gmusrthh3sygeyv3sr38",
@@ -206,13 +227,17 @@ class TuyaCloudApiOEM():
         password: str,
         client_id: str,
         secret: str,
+        country_code: str = "",
     ):
         self._endpoint = f"https://a1.tuya{region}.com/api.json"
         self._username = username
         self._password = password
 
-        # It works with empty country code but the parameter must be sent nonetheless
-        self._country_code = ""
+        # The parameter must be sent even when the country code is empty.
+        self._country_code = country_code
+        self._api_namespace = "tuya"
+        self._request_params = {}
+        self._post_params = False
 
         if cloud_type.startswith("oem_"):
             vendor = cloud_type.replace("oem_", "")
@@ -223,6 +248,14 @@ class TuyaCloudApiOEM():
             self._client_id = _TUYA_KNOWN_VENDORS[vendor]["client_id"]
             self._secret = _TUYA_KNOWN_VENDORS[vendor]["secret"]
             self._brand = _TUYA_KNOWN_VENDORS[vendor]["brand"]
+            config = _TUYA_KNOWN_VENDORS[vendor]
+            if "endpoints" in config:
+                if region not in config["endpoints"]:
+                    raise ValueError(f"Region {region} is not supported by {self._brand}")
+                self._endpoint = config["endpoints"][region]
+            self._api_namespace = config.get("api_namespace", "tuya")
+            self._request_params = config.get("request_params", {})
+            self._post_params = config.get("post_params", False)
         elif vendor == "generic":
             self._client_id = client_id
             self._secret = secret
@@ -242,7 +275,8 @@ class TuyaCloudApiOEM():
             extra_params = {}
 
         params = {
-            "a": action,
+            **self._request_params,
+            "a": action.replace("tuya.", self._api_namespace + ".", 1),
             "clientId": self._client_id,
             "v": _TUYA_API_VERSION,
             "time": str(int(time.time())),
@@ -263,8 +297,8 @@ class TuyaCloudApiOEM():
         func = functools.partial(
             self._session.post,
             self._endpoint,
-            params=params,
-            data=data,
+            params={} if self._post_params else params,
+            data={**params, **data} if self._post_params else data,
             headers=headers,
         )
 
@@ -406,7 +440,7 @@ class InvalidAuthentication(ValueError):
 
 def main(args):
     api = TuyaCloudApiOEM(f"oem_{args.vendor}", args.region, args.email,
-                          args.password, args.client_id, args.secret)
+                          args.password, args.client_id, args.secret, args.country_code)
 
     if args.sid:
         api._sid = args.sid
@@ -449,6 +483,9 @@ parser.add_argument("-r", "--region", choices=["eu", "us", "cn", "in"],
                     default="eu",
                     help="The region to use (default is eu)")
 
+parser.add_argument("--country-code", default="",
+                    help="Account country calling code, e.g. 48 for Poland")
+
 parser.add_argument("-v", "--vendor", choices=list(_TUYA_KNOWN_VENDORS.keys()),
                     default="smartlife",
                     help="The OEM vendor to use (default is Smart Life)")
@@ -469,6 +506,6 @@ parser.add_argument("-w", "--write-json",
                     nargs='?', const='devices.json', default=False, metavar='devices.json',
                     help="Write output to TinyTuya-compatible devices.json file. If this file already exists then devices will be merged into it")
 
-args = parser.parse_args()
-print(args)
-main(args)
+if __name__ == "__main__":
+    args = parser.parse_args()
+    main(args)

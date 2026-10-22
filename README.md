@@ -8,6 +8,7 @@ Supports these vendors/apps:
 
 - Smart Life (default)
 - Tuya
+- Boneco Smart
 - BirdLover
 - Brennenstuhl
 - Gosund
@@ -44,6 +45,20 @@ uncover.py -v vendor username password
 ```
 
 `uncover.py -h` for all options
+
+### Boneco Smart
+
+Boneco Smart uses its own API endpoints and an updated request-signing format.
+Select `boneco` and provide the country calling code used for your app account:
+
+```shell
+python uncover.py -v boneco -r eu --country-code 48 'you@example.com' 'your-password'
+```
+
+The app credentials were extracted from the official `com.boneco.smart` Android
+app version 1.1.0. Login and local-key retrieval were verified with an H700 SMART
+on the EU endpoint. The app also supplies endpoints for `us` and `in`; these have
+not been live-tested. The `cn` region is not supported for this vendor.
 
 Passwords using special characters might need to be escaped in `"` (e.g. `python uncover.py -r eu -v ledvance test@test.com "my$pass@word&"`
 
